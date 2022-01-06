@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function twoSum(nums, target){
+        // your code here
+        var l = nums.length
+        if (l==0){
+            if(nums[0]==target){
+                return nums[0]
+            }
+            else{
+                return false
+            }
+          }
+          
+          for(var i=0; i<l; i++){
+            var dummy = target - nums[i]
+            for (var j=0; j<l; j++){
+                if(dummy==nums[j]){
+                    return [i,j]
+                }
+                else{
+                    continue
+                }
+            }
+          }
+        }
+        let result=twoSum([2, 11, 7, 15], 9);
+        console.log(result); // show [0, 2] because nums[0]+nums[2] is 9
+
+    </script>
+
+</body>
+</html>

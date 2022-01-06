@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function avg(data){
+        // 請用你的程式補完這個函式的區塊
+           var dummy = 0
+           var employees = data["employees"]
+
+           for (var each in employees){
+            dummy+= employees[each]["salary"]
+           }
+           dummy = dummy/(data["count"])
+           console.log(dummy)
+        }
+        avg({
+        "count":3,
+        "employees":[
+        {
+        "name":"John",
+        "salary":30000
+        },
+        {
+        "name":"Bob",
+        "salary":60000
+        },
+        {
+        "name":"Jenny",
+        "salary":50000
+        }
+        ]
+        }); // 呼叫 avg 函式
+    </script>
+</body>
+</html>

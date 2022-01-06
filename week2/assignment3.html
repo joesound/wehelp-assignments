@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function maxProduct(nums){
+            // 請用你的程式補完這個函式的區塊
+                function Mergesort(data){
+                    if (data.length > 1){
+                        const mid = Math.floor(data.length / 2);
+                        const l = data.slice(0,mid);
+                        const r = data.slice(mid);
+                        Mergesort(l)
+                        Mergesort(r)
+                        let i = 0
+                        let j = 0
+                        let k = 0
+                        while (i < l.length && j < r.length ){
+                            if(l[i] <= r[j]){
+                                data[k] = l[i]
+                                i+=1
+                            }
+                            else{
+                                data[k] = r[j]
+                                j+=1
+                            }
+                            k+=1
+                        }
+
+                        while(i < l.length){
+                            data[k] = l[i]
+                            i+=1
+                            k+=1
+                        }
+
+                        while(j < r.length){
+                            data[k] = r[j]
+                            j+=1
+                            k+=1
+                            
+                        }
+
+                    }
+                }
+                if(nums.length===1){
+                    consol.log(nums)
+                }
+                else{
+                    Mergesort(nums)
+                    const lenofarray = nums.length
+                    if(nums[0]*nums[1] > nums[lenofarray-1]*nums[lenofarray-2]){
+                        console.log(nums[0]*nums[1])
+                    }
+                    else{
+                        console.log(nums[lenofarray-1]*nums[lenofarray-2])
+                    }
+                }
+                
+            }
+
+            maxProduct([5, 20, 2, 6]) // 得到 120
+            maxProduct([10, -20, 0, 3]) // 得到 30
+            maxProduct([-1, 2]) // 得到 -2
+            maxProduct([-1, 0, 2]) // 得到 0
+            maxProduct([-1, -2, 0]) // 得到 2
+    </script>
+</body>
+</html>
