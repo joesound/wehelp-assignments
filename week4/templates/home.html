@@ -1,0 +1,70 @@
+{% extends 'layout.html' %}
+
+{% block header %}
+  <h1>歡迎光臨，請輸入帳號密碼</h1>
+{% endblock %}
+ 
+{% block content %}
+<div>
+    <h1>登入系統</h1>
+    <form action="/signin", method="post">
+        <label for="account">帳號</label>
+       <input type="text" id="account" name="account" value=""><br>
+        <label for="password">密碼</label>
+        <input type="text" id="password" name="password" value=""><br><br>
+        <input type="submit">
+    </form>
+</div>
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <h1>歡迎光臨，請輸入帳號密碼</h1>
+    </div>
+    <form action="/signin", method="post">
+        <label for="account">帳號</label><br>
+        <input type="text" id="account" name="account" value=""><br>
+        <label for="password">密碼</label><br>
+        <input type="text" id="password" name="password" value=""><br><br>
+        <input type="submit">
+    </form>
+</body>
+</html> -->
