@@ -62,13 +62,13 @@
 ![image](https://github.com/joesound/wehelp-assignments/blob/371752e9ab709626ef7aabd2a34dbb87acfb47f7/week5/static/mysqltest.png)
 
 	1.2輸入 => 
-			INSERT INTO `member` VALUES(NULL,'google','google','google',120,NOW());
+		INSERT INTO `member` VALUES(NULL,'google','google','google',120,NOW());
 			
-			INSERT INTO `member` VALUES(NULL,'amazon','amazon','amazon',20,NOW());
+		INSERT INTO `member` VALUES(NULL,'amazon','amazon','amazon',20,NOW());
 			
-			INSERT INTO `member` VALUES(NULL,'tsmc','tsmc','tsmc',40,NOW()); 
+		INSERT INTO `member` VALUES(NULL,'tsmc','tsmc','tsmc',40,NOW()); 
 			
-			INSERT INTO `member` VALUES(NULL,'Netflix','Netflix','Netflix',30,NOW()); 
+		INSERT INTO `member` VALUES(NULL,'Netflix','Netflix','Netflix',30,NOW()); 
 
 按下ENTER，成功後出現以下畫面 (分別建立 四筆資料)
 
