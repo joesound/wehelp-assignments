@@ -87,8 +87,19 @@
 
 ![image](https://github.com/joesound/wehelp-assignments/blob/71a3fefe620e7fd8808228fdf9d231b290120c20/week5/static/mysqlchoose24.png)
 
+5.輸入 => SELECT * FROM `member` WHERE `username`='test'; 按下ENTER，成功後出現以下畫面 (test 的會員資料)
 
+![image](https://github.com/joesound/wehelp-assignments/blob/6ac364be900d6cb7feb325761b0982e575a0ec44/week5/static/mysqltestdata.png)
 
+6.輸入 => SELECT `username`, `password` FROM `member` WHERE `username`='test'; 按下ENTER，成功後出現以下畫面 (欄位 username 是 test、且欄位 password 也是 test 的資料)
+
+![image](https://github.com/joesound/wehelp-assignments/blob/4d8cbb43d94abba385d68b1bcb95202446c6cda5/week5/static/mysqltesttest.png)
+
+7.輸入 => UPDATE `member` AS `men`, (SELECT `id` FROM `member` WHERE `username`='test') AS `test_id` SET `name`='test2' WHERE `men`.`id`=`test_id`.`id`;
+
+按下ENTER，成功後出現以下畫面 (將test會員的name欄位改成test2)
+
+![image](https://github.com/joesound/wehelp-assignments/blob/745fb3da41cf3f43dbca2ce94abd49681e17ec64/week5/static/mysqlupdate.png)
 
 
 
