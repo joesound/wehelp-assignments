@@ -166,3 +166,7 @@
 按下ENTER，成功後出現以下畫面 (取得test的所有留言並包含會員的姓名)
 
 ![image](https://github.com/joesound/wehelp-assignments/blob/ee7eea13d2c192180aaa9e4102b604de926329e5/week5/static/mysqljoin2.png)
+
+補充:
+alter table `member` AUTO_INCREMENT=2; 當資料刪除後，直接新增資料id會保持既有位置往上加，可以透過此指令改變增加的順序
+
