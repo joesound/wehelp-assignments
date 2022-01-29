@@ -59,7 +59,7 @@
 	
 	1.1輸入 => INSERT INTO `member` VALUES(NULL,'test','test','test',100,NOW()); 按下ENTER，成功後出現以下畫面 (建立test帳號 VALUES分別對應TABLE內容)
 
-	![image](https://github.com/joesound/wehelp-assignments/blob/371752e9ab709626ef7aabd2a34dbb87acfb47f7/week5/static/mysqltest.png)
+![image](https://github.com/joesound/wehelp-assignments/blob/371752e9ab709626ef7aabd2a34dbb87acfb47f7/week5/static/mysqltest.png)
 
 	1.2輸入 => 
           
@@ -100,6 +100,23 @@
 按下ENTER，成功後出現以下畫面 (將test會員的name欄位改成test2)
 
 ![image](https://github.com/joesound/wehelp-assignments/blob/745fb3da41cf3f43dbca2ce94abd49681e17ec64/week5/static/mysqlupdate.png)
+
+要求四:
+
+1.輸入 => SELECT COUNT(`username`) FROM `member`; 按下ENTER，成功後出現以下畫面 (總共有幾筆會員資料)
+
+![image](https://github.com/joesound/wehelp-assignments/blob/b7cf16fe1a7ff6db5396b155441737c99f329aad/week5/static/mysqlcount.png)
+
+2.輸入 => SELECT SUM(`follower_count`) FROM `member`; 按下ENTER，成功後出現以下畫面 (計算follower_count 欄位的總和)
+
+![image](https://github.com/joesound/wehelp-assignments/blob/b7cf16fe1a7ff6db5396b155441737c99f329aad/week5/static/mysqlsum.png)
+
+3.輸入 => SELECT AVG(`follower_count`) FROM `member`; 按下ENTER，成功後出現以下畫面 (計算follower_count 欄位的平均數)
+
+![image](https://github.com/joesound/wehelp-assignments/blob/b7cf16fe1a7ff6db5396b155441737c99f329aad/week5/static/mysqlavg.png)
+
+
+
 
 
 
