@@ -1,4 +1,5 @@
 要求一:
+
 1.下載mysql安裝檔(https://dev.mysql.com/downloads/windows/installer/8.0.html)
 
 2.安裝mysql，並設定root帳號密碼
