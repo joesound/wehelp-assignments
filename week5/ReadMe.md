@@ -155,6 +155,14 @@
 
 ![image](https://github.com/joesound/wehelp-assignments/blob/d5ce06e50056c817aab0ae451e4a9af7dea0f5aa/week5/static/mysqladdcomment.png)
 
-3.輸入 => SELECT `message`.`content`, `member`.`name` FROM `message` INNER JOIN `member` ON `message`.`member_id`=`member`.`id`; 按下ENTER，成功後出現以下畫面 (取得所有留言，包含留言者會員的姓名)
+3.輸入 => SELECT `message`.`content`, `member`.`name` FROM `message` INNER JOIN `member` ON `message`.`member_id`=`member`.`id`; 按下ENTER，成功後出現以下畫面 
+
+(取得所有留言，包含留言者會員的姓名)
 
 ![image](https://github.com/joesound/wehelp-assignments/blob/0ffe3a081cc9e2620ac36c315ad498318df61da7/week5/static/mysqljoin1.png)
+
+4.輸入 => SELECT  `message`.`content` , `member`.`name` FROM `member` INNER JOIN `message` ON `message`.`member_id`=`member`.`id` WHERE `member`.`username`='test'; 
+
+按下ENTER，成功後出現以下畫面 (取得test的所有留言並包含會員的姓名)
+
+![image](https://github.com/joesound/wehelp-assignments/blob/ee7eea13d2c192180aaa9e4102b604de926329e5/week5/static/mysqljoin2.png)
