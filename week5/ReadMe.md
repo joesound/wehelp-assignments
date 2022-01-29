@@ -62,14 +62,13 @@
 ![image](https://github.com/joesound/wehelp-assignments/blob/371752e9ab709626ef7aabd2a34dbb87acfb47f7/week5/static/mysqltest.png)
 
 	1.2輸入 => 
-          
-	  INSERT INTO `member` VALUES(NULL,'google','google','google',120,NOW());
-       
-          INSERT INTO `member` VALUES(NULL,'amazon','amazon','amazon',20,NOW());
-
-          INSERT INTO `member` VALUES(NULL,'tsmc','tsmc','tsmc',40,NOW()); 
-	  
-	  INSERT INTO `member` VALUES(NULL,'Netflix','Netflix','Netflix',30,NOW()); 
+			INSERT INTO `member` VALUES(NULL,'google','google','google',120,NOW());
+			
+			INSERT INTO `member` VALUES(NULL,'amazon','amazon','amazon',20,NOW());
+			
+			INSERT INTO `member` VALUES(NULL,'tsmc','tsmc','tsmc',40,NOW()); 
+			
+			INSERT INTO `member` VALUES(NULL,'Netflix','Netflix','Netflix',30,NOW()); 
 
 按下ENTER，成功後出現以下畫面 (分別建立 四筆資料)
 
@@ -116,7 +115,46 @@
 ![image](https://github.com/joesound/wehelp-assignments/blob/b7cf16fe1a7ff6db5396b155441737c99f329aad/week5/static/mysqlavg.png)
 
 
+要求五:
 
+1.輸入 => CREATE TABLE `message` (
+          
+	  `id` bigint PRIMARY KEY AUTO_INCREMENT,
+	  
+	  `member_id` bigint NOT NULL ,
+	  
+	  `content` varchar(255) NOT NULL,
+	  
+	  `time` datetime NOT NULL DEFAULT NOW(),
+	  
+	  FOREIGN KEY (`member_id`) REFERENCES `member`(`id`)
+	
+    );
+    
+按下ENTER，成功後出現以下畫面 (新增message TABLE)
 
+![image](https://github.com/joesound/wehelp-assignments/blob/6d388b948ae3d505d4b0b784ddb8c1315de383ef/week5/static/mysqlmessage.png)
 
+2.輸入 =>  
+	
+	INSERT INTO `message` VALUES(NULL,1,'very good',NOW());
 
+	INSERT INTO `message` VALUES(NULL,2,'nice!',NOW());
+
+	INSERT INTO `message` VALUES(NULL,3,'awesome',NOW());
+
+	INSERT INTO `message` VALUES(NULL,4,'like',NOW());
+
+	INSERT INTO `message` VALUES(NULL,1,'like',NOW());
+
+	INSERT INTO `message` VALUES(NULL,1,'good',NOW());
+
+	INSERT INTO `message` VALUES(NULL,1,'well done',NOW());
+	
+按下ENTER，成功後出現以下畫面 (新增留言)
+
+![image](https://github.com/joesound/wehelp-assignments/blob/d5ce06e50056c817aab0ae451e4a9af7dea0f5aa/week5/static/mysqladdcomment.png)
+
+3.輸入 => SELECT `message`.`content`, `member`.`name` FROM `message` INNER JOIN `member` ON `message`.`member_id`=`member`.`id`; 按下ENTER，成功後出現以下畫面 (取得所有留言，包含留言者會員的姓名)
+
+![image](https://github.com/joesound/wehelp-assignments/blob/0ffe3a081cc9e2620ac36c315ad498318df61da7/week5/static/mysqljoin1.png)
