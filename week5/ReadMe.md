@@ -52,3 +52,43 @@
 5.輸入 => SHOW TABLES; 按下ENTER，成功後出現以下畫面(看到資料庫中存在的TABLE)
 
 ![image](https://github.com/joesound/wehelp-assignments/blob/390598205479c2752b69ae802a25308a52a7eb37/week5/static/mysqlshowtables.png)
+
+要求三:
+
+1.
+	
+	1.1輸入 => INSERT INTO `member` VALUES(NULL,'test','test','test',100,NOW()); 按下ENTER，成功後出現以下畫面 (建立test帳號 VALUES分別對應TABLE內容)
+
+	![image](https://github.com/joesound/wehelp-assignments/blob/371752e9ab709626ef7aabd2a34dbb87acfb47f7/week5/static/mysqltest.png)
+
+	1.2輸入 => 
+          
+	  INSERT INTO `member` VALUES(NULL,'google','google','google',120,NOW());
+       
+          INSERT INTO `member` VALUES(NULL,'amazon','amazon','amazon',20,NOW());
+
+          INSERT INTO `member` VALUES(NULL,'tsmc','tsmc','tsmc',40,NOW()); 
+	  
+	  INSERT INTO `member` VALUES(NULL,'Netflix','Netflix','Netflix',30,NOW()); 
+
+按下ENTER，成功後出現以下畫面 (分別建立 四筆資料)
+
+![image](https://github.com/joesound/wehelp-assignments/blob/b4128872cdc52724098f618c6938eab33e310fec/week5/static/mysqladd4.png)
+
+2.輸入 => SELECT * FROM `member`; 按下ENTER，成功後出現以下畫面 
+	  
+![image](https://github.com/joesound/wehelp-assignments/blob/b4128872cdc52724098f618c6938eab33e310fec/week5/static/mysqladd4.png)
+
+3.輸入 => SELECT * FROM `member` ORDER BY `time` DESC; 按下ENTER，成功後出現以下畫面 (排序按照時間近到遠) 
+
+![image](https://github.com/joesound/wehelp-assignments/blob/44c88f9a007b9c9c2e7e468c4686e9235f896f18/week5/static/mysqlorderbydesc.png)
+
+4.輸入 => SELECT * FROM `member` ORDER BY `time` DESC Limit 1,3; 按下ENTER，成功後出現以下畫面 (第 2 ~ 4 共三筆資料，並按照 time 欄位)
+
+![image](https://github.com/joesound/wehelp-assignments/blob/71a3fefe620e7fd8808228fdf9d231b290120c20/week5/static/mysqlchoose24.png)
+
+
+
+
+
+
