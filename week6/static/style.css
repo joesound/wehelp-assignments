@@ -1,0 +1,65 @@
+
+*{
+    padding: 0%;
+    margin: 0%;
+}
+
+
+.header{
+    display: flex;
+    background-color: aqua;
+    min-height: 200px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.content{
+    display: flex;
+    padding-top: 100px;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.content h1{
+    text-align: center;
+}
+
+.content .member_container{
+    display: block;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .member_container div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.content .home_container form{
+    font-size: 20px;
+    text-align: center;
+}
+
+.content .home_container form input{
+    margin: 5px;
+    width: 200px;
+    height: 20px;
+    text-align: center;
+}
+
+.content .home_container form input#sign{
+    width: 50px;
+    height: 20px;
+    text-align: center;
+}
+
+.content .home_container .signup_container{
+    margin: 10px;
+}
+
+.content .home_container .signin_container{
+    margin: 10px;
+}
