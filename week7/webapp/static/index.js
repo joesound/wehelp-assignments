@@ -3,7 +3,7 @@ function fetch_userdata_by_username(member_search_username){
     username = member_search_username.value
     fetch(`/api/members?username=${username}`)
     .then(response => response.json())
-    .then(data => show_user_name_data.textContent = data["data"]["name"]);
+    .then(data => show_user_name_data.textContent = check_username_data(data));
         // 
 };
 
@@ -29,6 +29,16 @@ function update_userdata_by_username(member_update_username){
     );
     }  
 };
+
+function check_username_data(response_data){
+    if (response_data["data"]){
+        return response_data["data"]["name"]
+    }else{
+        console.log(response_data["data"])
+        return "user no found"
+    }
+}
+
 
 
 function update_username_status(response_data){
