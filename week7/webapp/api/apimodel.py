@@ -36,18 +36,9 @@ def update_username_by_username(update_username, username):
         val = (update_username, username,)
         mycursor.execute(update_name_of_user_sql, val)
         mydb.commit()
-
-        check_user_name_update = "SELECT name FROM member WHERE username = %s"      #將更新的name找出來,提供後續比較
-        val = (username,)
-        mycursor.execute(check_user_name_update, val)
-        updatename_information = mycursor.fetchone()
-        sql_update_name = updatename_information[0]                
-        if sql_update_name == update_username:                                      #比較更新的name,如果更新成功，就回傳成功訊息
-            mycursor.close
-            return True, "update sucess"                                            
-        else:                                                                       #如果錯誤救回傳錯誤訊息
-            mycursor.close
-            return False, "update fail something wrong"                           
+        mycursor.close
+        return True, "update sucess"                                            
+                            
     except mysql.connector.Error as err:
             print(err)
             mycursor.close
