@@ -1,3 +1,4 @@
+from asyncio.windows_events import NULL
 from flask import Flask, render_template, request, session, redirect, url_for, Blueprint
 import json
 
@@ -22,7 +23,7 @@ def members():
                     }
             return json.dumps(Udata)
         else:
-            Udata = {"data":"null"}   # user not found
+            Udata = {"data":None}   # user not found
             return json.dumps(Udata)
         
         
